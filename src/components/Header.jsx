@@ -23,6 +23,7 @@ const Header = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             {/* Enhanced Logo */}
+            <Link to='/'>
             <div className="flex items-center space-x-2">
               <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
               <h1 className="text-4xl font-black italic bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent transform hover:scale-105 transition-transform duration-300">
@@ -32,6 +33,7 @@ const Header = () => {
                 hub
               </span>
             </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">

@@ -32,27 +32,41 @@ const TeamMemberCard = ({ name, role, description, technologies, imageUrl }) => 
   </div>
 );
 
-const About = () => {
+const Team = () => {
   const teamMembers = [
     {
       name: "Uzair Shahid",
       role: "Lead Full Stack Developer",
       description: "Specialized in MERN stack development with a focus on creating scalable web applications and managing team operations.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "AWS", "Redux"],
+      technologies: ["React", "React Native", "Node.js", "MongoDB", "Express", "Redux", "App Development"],
       imageUrl: "/path/to/uzair.jpg" // Replace with actual image path
     },
     {
       name: "Zubair Shahid",
-      role: "Backend Development Specialist",
-      description: "Expert in building robust backend architectures with MERN stack, focusing on system optimization and database management.",
-      technologies: ["Node.js", "Express", "MongoDB", "REST APIs", "Docker", "Microservices"],
+      role: "Lead Backend Developer",
+      description: "Expert in building robust and scalable backend architectures with MERN stack, Inversify JS, focusing on system optimization and database management.",
+      technologies: ["Node.js", "Express", "MongoDB", "REST APIs", "Docker", "Microservices", "Dependency Injections", "inversion Of Control", "TypeScript"],
       imageUrl: "/path/to/zubair.jpg" // Replace with actual image path
     },
     {
       name: "Talha Zahid",
-      role: "PHP Development Expert",
+      role: "Lead PHP/Laravel Developer",
       description: "Master of Laravel and PHP ecosystem, specializing in creating efficient and secure web applications.",
-      technologies: ["Laravel", "PHP", "MySQL", "Vue.js", "Redis", "REST APIs"],
+      technologies: ["Laravel","Cold Fusion", "PHP", "MySQL", "Vue.js", "Redis", "REST APIs"],
+      imageUrl: "/path/to/talha.jpg" // Replace with actual image path
+    },
+    {
+      name: "Waqar Ahmad",
+      role: "Lead Odoo Developer",
+      description: "Master of Laravel and PHP ecosystem, specializing in creating efficient and secure web applications.",
+      technologies: ["Laravel","Cold Fusion", "PHP", "MySQL", "Vue.js", "Redis", "REST APIs"],
+      imageUrl: "/path/to/talha.jpg" // Replace with actual image path
+    },
+    {
+      name: "Jawad Haleem",
+      role: "AI Engineer",
+      description: "Master of Laravel and PHP ecosystem, specializing in creating efficient and secure web applications.",
+      technologies: ["Laravel","Cold Fusion", "PHP", "MySQL", "Vue.js", "Redis", "REST APIs"],
       imageUrl: "/path/to/talha.jpg" // Replace with actual image path
     }
   ];
@@ -146,4 +160,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Team;

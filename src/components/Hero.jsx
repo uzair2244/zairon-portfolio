@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const phrases = [
     "Your gateway to cutting-edge tech solutions.",
-    "Expert team. Robust tech stacks. One click away."
+    "Expert team. Robust tech stacks. One click away.",
   ];
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState("");
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     const phrase = phrases[currentPhraseIndex];
-    
+
     if (isTyping) {
       if (currentText.length < phrase.length) {
         const timeout = setTimeout(() => {
@@ -47,14 +47,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-cyan-900/20 to-blue-900/20" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
-        
+
         {/* Animated grid background */}
-        <div 
+        <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px)',
-            backgroundSize: '4rem 4rem',
-            maskImage: 'radial-gradient(circle at 50% 50%, black, transparent 70%)'
+            backgroundImage:
+              "linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px)",
+            backgroundSize: "4rem 4rem",
+            maskImage:
+              "radial-gradient(circle at 50% 50%, black, transparent 70%)",
           }}
         />
       </div>
@@ -83,7 +85,9 @@ const Hero = () => {
           </h1>
 
           {/* Animated typing text */}
-          <div className="h-24 md:h-16"> {/* Fixed height container to prevent layout shift */}
+          <div className="h-24 md:h-16">
+            {" "}
+            {/* Fixed height container to prevent layout shift */}
             <p className="text-lg md:text-xl text-gray-400 font-mono mb-12">
               {currentText}
               <span className="inline-block w-1 h-6 ml-1 bg-cyan-400 animate-blink" />
@@ -92,17 +96,21 @@ const Hero = () => {
 
           {/* Call to action button group */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl text-white font-semibold overflow-hidden hover:scale-105 transition-transform duration-300">
-              <span className="relative z-10 flex items-center gap-2">
-                <Link to="/projects">Explore Solutions</Link>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
-            
-            <button className="px-8 py-4 rounded-xl text-white font-semibold border border-white/10 hover:bg-white/5 hover:scale-105 transition-all duration-300">
-              <Link to="/contact">Contact Us</Link>
-            </button>
+            <Link to="/projects">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl text-white font-semibold overflow-hidden hover:scale-105 transition-transform duration-300">
+                <span className="relative z-10 flex items-center gap-2">
+                  Explore Solutions
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+            </Link>
+
+            <Link to="/contact">
+              <button className="px-8 py-4 rounded-xl text-white font-semibold border border-white/10 hover:bg-white/5 hover:scale-105 transition-all duration-300">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </div>
