@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px 10px #00ffff, -2px -2px 10px #ff00ff; }
+  50% { text-shadow: -2px -2px 10px #00ffff, 2px 2px 10px #ff00ff; }
+  100% { text-shadow: 2px 2px 10px #00ffff, -2px -2px 10px #ff00ff; }
+}
+
+.glitch {
+  animation: glitch 1.5s infinite alternate;
+}
+
+@keyframes bg-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-bg-move {
+  animation: bg-move 6s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% { opacity: 0.2; transform: translateX(-10px); }
+  50% { opacity: 0.5; transform: translateX(10px); }
+  100% { opacity: 0.2; transform: translateX(-10px); }
+}
+
+.animate-glow {
+  animation: glow 4s infinite alternate ease-in-out;
+}
+
+.text-neon-blue {
+  color: #00ffff;
+}
+
+.border-neon-blue {
+  border-color: #00ffff;
+}
+
+.shadow-neon-glow {
+  box-shadow: 0px 0px 10px #00ffff;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Completely hides the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}
