@@ -97,7 +97,7 @@ const Hero = () => {
           {/* Call to action button group */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/projects">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl text-white font-semibold overflow-hidden hover:scale-105 transition-transform duration-300">
+              <button className="group relative px-8 py-4 bg-gradient-to-r cursor-pointer from-cyan-500 to-purple-500 rounded-xl text-white font-semibold overflow-hidden hover:scale-105 transition-transform duration-300">
                 <span className="relative z-10 flex items-center gap-2">
                   Explore Solutions
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -107,7 +107,7 @@ const Hero = () => {
             </Link>
 
             <Link to="/contact">
-              <button className="px-8 py-4 rounded-xl text-white font-semibold border border-white/10 hover:bg-white/5 hover:scale-105 transition-all duration-300">
+              <button className="px-8 py-4 cursor-pointer rounded-xl text-white font-semibold border border-white/10 hover:bg-white/5 hover:scale-105 transition-all duration-300">
                 Contact Us
               </button>
             </Link>

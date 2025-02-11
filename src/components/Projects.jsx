@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => (
         ))}
       </div>
 
-      {/* Action Links */}
+      {/* Action Links
       <div className="flex gap-4 pt-4">
         <a 
           href={project.liveLink}
@@ -59,7 +59,7 @@ const ProjectCard = ({ project }) => (
           <Github className="w-4 h-4" />
           Source Code
         </a>
-      </div>
+      </div> */}
     </div>
   </div>
 );
