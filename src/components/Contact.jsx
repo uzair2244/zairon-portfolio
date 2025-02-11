@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Github, Linkedin, Instagram } from 'lucide-react';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const resetForm = () =>{
+    setFormData({ name: "", email: "", message: "" });
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_abfdtp7",   
+        "template_i6ovo2m", 
+        formData,
+        "Jv9tFYdiT5JJkV1Dd"   
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response);
+          resetForm()
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+        }
+      );
+  };
   return (
     <section id="contact" className="relative min-h-screen bg-black py-24 overflow-hidden">
       {/* Background Elements */}
@@ -33,7 +63,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <form className="max-w-lg mx-auto space-y-6">
+        <form className="max-w-lg mx-auto space-y-6" onSubmit={handleSubmit}>
           {/* Social Links */}
           <div className="flex justify-end items-center space-x-6 pt-8">
             <a 
@@ -65,6 +95,8 @@ const Contact = () => {
           <div className="group relative">
             <input
               type="text"
+              name='name'
+              onChange={handleChange}
               placeholder="Your Name"
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 placeholder:text-white/70"
             />
@@ -74,6 +106,8 @@ const Contact = () => {
           <div className="group relative">
             <input
               type="email"
+              name='email'
+              onChange={handleChange}
               placeholder="Your Email"
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 placeholder:text-white/70"
             />
@@ -82,7 +116,9 @@ const Contact = () => {
           {/* Message Field */}
           <div className="group relative">
             <textarea
+            name='message'
               placeholder="Your Message"
+              onChange={handleChange}
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 resize-none placeholder:text-white/70"
               rows="5"
             ></textarea>
