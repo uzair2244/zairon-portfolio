@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Instagram } from 'lucide-react';
 import emailjs from "@emailjs/browser";
+import LoadingButton from './LoadingButton';
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,7 +17,7 @@ const Contact = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setLoading(true)
     emailjs
       .send(
         "service_abfdtp7",   
@@ -25,10 +28,14 @@ const Contact = () => {
       .then(
         (response) => {
           console.log("Email sent successfully!", response);
+          setLoading(false)
+          toast.success("Message Sent Successfully");
           resetForm()
         },
         (error) => {
           console.error("Error sending email:", error);
+          setLoading(false)
+          toast.success("Message Sending Failed");
         }
       );
   };
@@ -95,7 +102,9 @@ const Contact = () => {
           <div className="group relative">
             <input
               type="text"
+              required
               name='name'
+              value={formData?.name}
               onChange={handleChange}
               placeholder="Your Name"
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 placeholder:text-white/70"
@@ -106,7 +115,9 @@ const Contact = () => {
           <div className="group relative">
             <input
               type="email"
+              required
               name='email'
+              value={formData?.email}
               onChange={handleChange}
               placeholder="Your Email"
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 placeholder:text-white/70"
@@ -117,7 +128,9 @@ const Contact = () => {
           <div className="group relative">
             <textarea
             name='message'
+            required
               placeholder="Your Message"
+              value={formData?.message}
               onChange={handleChange}
               className="w-full p-4 bg-white/5 text-white border border-white/10 rounded-xl focus:border-cyan-500/30 transition-all duration-300 resize-none placeholder:text-white/70"
               rows="5"
@@ -125,12 +138,7 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300"
-          >
-            Send Message
-          </button>
+          <LoadingButton isLoading={loading}>Send Message</LoadingButton>
         </form>
       </div>
     </section>

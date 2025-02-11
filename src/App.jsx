@@ -6,11 +6,13 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import './App.css';
 import WhyUs from "./components/WhyUs";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <Router>
       <Header />
+      <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/team" element={<Team />} />
