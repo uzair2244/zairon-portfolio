@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import './App.css';
 import WhyUs from "./components/WhyUs";
 import { Toaster } from "react-hot-toast";
+import Founders from "./components/Founder";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/why-us" element={<WhyUs />} />
+        <Route path="/founder" element={<Founders />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

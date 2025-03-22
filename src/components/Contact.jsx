@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 import LoadingButton from './LoadingButton';
 import { toast } from "react-hot-toast";
@@ -90,12 +90,12 @@ const Contact = () => {
               <Github size={28} />
             </a>
             <a 
-              href="https://instagram.com" 
+              href="https://x.com/uxi_ee" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors duration-300 hover:scale-110 transform"
             >
-              <Instagram size={28} />
+              <Twitter size={28} />
             </a>
           </div>
           {/* Name Field */}

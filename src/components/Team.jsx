@@ -13,14 +13,14 @@ const TeamMemberCard = ({ name, role, description, technologies, imageUrl, linke
     <div className="flex-grow space-y-4">
       {/* Profile section */}
       <div className="flex items-center gap-4">
-        <div className="relative w-20 h-20">
+        {/* <div className="relative w-20 h-20">
           <img
             src={imageUrl || "/api/placeholder/80/80"}
             alt={name}
             className="rounded-full object-cover w-full h-full border-2 border-cyan-500/30"
           />
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500/20 via-transparent to-cyan-500/20 mix-blend-overlay" />
-        </div>
+        </div> */}
         <div>
           <h3 className="text-xl font-bold text-white">{name}</h3>
           <p className="text-cyan-400">{role}</p>
@@ -48,14 +48,14 @@ const TeamMemberCard = ({ name, role, description, technologies, imageUrl, linke
       >
         <Linkedin size={28} />
       </a>
-      <a 
+      {/* <a 
         href={gitHubUrl}
         target="_blank" 
         rel="noopener noreferrer"
         className="text-white/70 hover:text-white transition-colors duration-300 hover:scale-110 transform"
       >
         <Github size={28} />
-      </a>
+      </a> */}
     </div>
   </div>
 );
@@ -77,7 +77,7 @@ const Team = () => {
       description: "Expert in building robust and scalable backend architectures with MERN stack, Inversify JS, focusing on system optimization and database management.",
       technologies: ["Node.js", "Express", "MongoDB", "REST APIs", "Docker", "Microservices", "Dependency Injections", "inversion Of Control", "TypeScript"],
       imageUrl: "/path/to/zubair.jpg",
-      linkedInUrl: "",
+      linkedInUrl: "https://www.linkedin.com/in/muhammad-zubair-shahid/",
       gitHubUrl: ""
     },
     {
@@ -86,7 +86,7 @@ const Team = () => {
       description: "Master of Laravel and PHP ecosystem, specializing in creating efficient and secure web applications.",
       technologies: ["Laravel","Cold Fusion", "Java", "JavaFx", "Enactor","React JS","Laminas", "Symphony", "PHP", "Mongo DB", "MySQL", "Vue.js", "Apache", "Nginx", "Redis", "REST APIs", "AWS", "Google Cloud VM"],
       imageUrl: "/path/to/talha.jpg",
-      linkedInUrl: "",
+      linkedInUrl: "https://www.linkedin.com/in/muhammad-talha-zahid-946a8b2a1/",
       gitHubUrl: ""
     },
     {
@@ -104,7 +104,7 @@ const Team = () => {
       description: "Master of Laravel and PHP ecosystem, specializing in creating efficient and secure web applications.",
       technologies: ["Laravel","Cold Fusion", "PHP", "MySQL", "Vue.js", "Redis", "REST APIs"],
       imageUrl: "/path/to/talha.jpg",
-      linkedInUrl: "",
+      linkedInUrl: "https://www.linkedin.com/in/jawad-haleem/",
       gitHubUrl: ""
     }
   ];

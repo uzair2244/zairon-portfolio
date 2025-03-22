@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Sparkles, Globe, Laptop, SendHorizontal, Users, Star } from 'lucide-react';
+import { Menu, X, Sparkles, Globe, Crown, Laptop, SendHorizontal, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -7,6 +7,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/", icon: <Globe className="w-4 h-4" /> },
+    { name: "Founder", href: "founder", icon: <Crown className="w-4 h-4" /> },
     { name: "Team", href: "team", icon: <Users className="w-4 h-4" /> },
     { name: "Projects", href: "projects", icon: <Laptop className="w-4 h-4" /> },
     { name: "Why US?", href: "why-us", icon: <Star className="w-4 h-4" /> },
@@ -73,7 +74,7 @@ const Header = () => {
             overflow-hidden 
             transition-all 
             duration-500 
-            ${isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}
+            ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}
           `}>
             <div className="py-6 space-y-6 flex flex-col items-center bg-gradient-to-b from-transparent to-black/50">
               {navLinks.map((link, index) => (
