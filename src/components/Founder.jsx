@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Twitter, Mail, Award, BookOpen, Calendar, Lightbulb, Rocket, PenTool, Mic, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import ChatBotComponent from "./ChatBot";
 
 const SocialLink = ({ icon: Icon, href, label }) => (
   <a 
