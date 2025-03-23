@@ -151,7 +151,7 @@ const ChatBotComponent = () => {
                 </div> */}
                 <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 flex-shrink-0">
                   <img
-                    src="/public/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png" // Replace with your cute bot avatar URL
+                    src="/src/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png" // Replace with your cute bot avatar URL
                     alt="Bot Avatar"
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -181,7 +181,7 @@ const ChatBotComponent = () => {
                     {message.sender === "bot" && (
                       <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 flex-shrink-0">
                         <img
-                          src="/public/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png"
+                          src="/src/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png"
                           alt="Bot Avatar"
                           className="w-full h-full object-cover rounded-full"
                         />
@@ -243,7 +243,7 @@ const ChatBotComponent = () => {
                   <div className="flex justify-start">
                     <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-2 flex-shrink-0">
                       <img
-                        src="/public/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png" // Replace with your cute bot avatar URL
+                        src="/src/assets/58a9540c-bfbe-4090-b6fa-56d77ced5cc0.png" // Replace with your cute bot avatar URL
                         alt="Bot Avatar"
                         className="w-full h-full object-cover rounded-full"
                       />
