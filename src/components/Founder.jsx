@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Twitter, Mail, Award, BookOpen, Calendar, Lightbulb, Rocket, PenTool, Mic, Users } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Award, BookOpen, Calendar, Lightbulb, Rocket, PenTool, Mic, Users, Server, Cloud, Code, Database, Trophy, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import ChatBotComponent from "./ChatBot";
 
@@ -46,7 +46,7 @@ const FounderProfile = ({
           <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
           <div className="relative overflow-hidden rounded-xl aspect-square">
             <img 
-              src={imageSrc || "/api/placeholder/400/400"} 
+              src={imageSrc || ""} 
               alt={name} 
               className="w-full h-full object-cover"
             />
@@ -144,47 +144,49 @@ const Founders = () => {
       }
     ]    
     },
-    // {
-    //   name: "Marcus Wilson",
-    //   role: "Co-Founder & CTO",
-    //   bio: "Marcus is a visionary technologist with deep expertise in emerging technologies. His background in computer science and experience building scalable systems has been instrumental in developing our core technology platform. Marcus leads our R&D initiatives and ensures we stay at the forefront of technological advancement.",
-    //   imageSrc: "/api/placeholder/400/400", // Replace with actual image path
-    //   socialLinks: [
-    //     { icon: Github, href: "https://github.com/example2", label: "GitHub Profile" },
-    //     { icon: Linkedin, href: "https://linkedin.com/in/example2", label: "LinkedIn Profile" },
-    //     { icon: Twitter, href: "https://twitter.com/example2", label: "Twitter Profile" },
-    //     { icon: Mail, href: "mailto:marcus@example.com", label: "Email Marcus" },
-    //   ],
-    //   expertise: [
-    //     "Distributed Systems", 
-    //     "Performance Optimization", 
-    //     "DevOps & SRE", 
-    //     "Blockchain",
-    //     "Real-time Processing"
-    //   ],
-    //   achievements: [
-    //     {
-    //       icon: Award,
-    //       title: "Open Source Contributor",
-    //       description: "Major contributor to several key open-source projects in the cloud-native ecosystem."
-    //     },
-    //     {
-    //       icon: BookOpen,
-    //       title: "Tech Mentor",
-    //       description: "Mentored over 50 junior developers who have gone on to leadership positions."
-    //     },
-    //     {
-    //       icon: Calendar,
-    //       title: "Hackathon Champion",
-    //       description: "Winner of multiple international hackathons for innovative solutions."
-    //     },
-    //     {
-    //       icon: Lightbulb,
-    //       title: "Research Publications",
-    //       description: "Published 12 papers on distributed systems and real-time data processing."
-    //     }
-    //   ]
-    // }
+    {
+      "name": "M Zubair Shahid",
+      "role": "Co-Founder & CTO",
+      "bio": "M. Zubair Shahid, our co-founder and CTO, is a visionary technologist with deep expertise in backend engineering, system architecture, and cloud technologies. With a passion for building scalable, high-performance applications, he has been instrumental in shaping Zairon Hub’s technical vision. His expertise in Node.js, distributed systems, and AWS ensures that our solutions are robust, secure, and future-ready. His strategic mindset and hands-on approach drive innovation, optimizing infrastructure and backend performance for mission-critical applications.",
+      "imageSrc": "/src/assets/profile2.jpg",  // Replace with actual image path
+      socialLinks: [
+        { icon: Linkedin, "href": "http://linkedin.com/in/muhammad-zubair-shahid/", "label": "LinkedIn Profile" },
+        { icon: Mail, "href": "mailto:zubairshahid008@gmail.com", "label": "Email Zubair" }
+      ],
+      expertise: [
+        "Backend Architecture",
+        "Node.js & Express.js",
+        "Microservices & Serverless",
+        "AWS Cloud Solutions",
+        "Database Optimization",
+        "Scalability & Performance Tuning",
+        "CI/CD & DevOps Automation",
+        "Security & API Development"
+      ],
+      achievements: [
+        {
+          "icon": Server,
+          "title": "Backend Architect",
+          "description": "Designed scalable and secure backend systems for high-traffic applications using Node.js and microservices."
+        },
+        {
+          "icon": Cloud,
+          "title": "AWS Expert",
+          "description": "Built and optimized cloud-native applications using AWS Lambda, DynamoDB, ECS, and S3."
+        },
+        {
+          "icon": Code,
+          "title": "Open Source Contributor",
+          "description": "Actively contributed to leading open-source backend and DevOps projects."
+        },
+        {
+          "icon": Database,
+          "title": "Data Optimization Specialist",
+          "description": "Enhanced database performance for large-scale applications using MongoDB, PostgreSQL, and Redis."
+        }
+      ]
+    }
+    
   ];
 
   return (
