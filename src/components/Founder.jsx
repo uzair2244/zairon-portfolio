@@ -148,7 +148,7 @@ const Founders = () => {
       "name": "M Zubair Shahid",
       "role": "Co-Founder & CTO",
       "bio": "M. Zubair Shahid, our co-founder and CTO, is a visionary technologist with deep expertise in backend engineering, system architecture, and cloud technologies. With a passion for building scalable, high-performance applications, he has been instrumental in shaping Zairon Hub’s technical vision. His expertise in Node.js, distributed systems, and AWS ensures that our solutions are robust, secure, and future-ready. His strategic mindset and hands-on approach drive innovation, optimizing infrastructure and backend performance for mission-critical applications.",
-      "imageSrc": "/src/assets/profile2.jpg",  // Replace with actual image path
+      "imageSrc": "/assets/profile2.png",  // Replace with actual image path
       socialLinks: [
         { icon: Linkedin, "href": "http://linkedin.com/in/muhammad-zubair-shahid/", "label": "LinkedIn Profile" },
         { icon: Mail, "href": "mailto:zubairshahid008@gmail.com", "label": "Email Zubair" }
